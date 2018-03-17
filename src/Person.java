@@ -24,44 +24,50 @@ class Person
     // accessors and mutators
     public void setName(String name)
     {
-
+        this.name = name;
     }
 
     public String getName()
     {
-        return "";
+        return name;
     }
 
     public void setAge(int age)
     {
-
+        this.age = age;
     }
 
     public int getAge()
     {
-        return -1;
+        return age;
     }
 
 
     public Person()
     {
-
+        this.name = null;
+        this.age = 0;
     }
 
     public Person(String name, int age)
     {
-
+        this.name = name;
+        this.age = age;
     }
 
 
     public String toString()
     {
         // look at unit test for format
-        return "";
+        return "Person(name=" + name + ", age=" + age + ")";
     }
 
     public boolean equals(Person other)
     {
+        if (this.name.equals(other.getName()))
+        {
+            return this.age == other.getAge();
+        }
         return false;
     }
 }
